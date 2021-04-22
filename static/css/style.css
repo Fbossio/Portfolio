@@ -1210,6 +1210,76 @@ button:focus {
   }
 }
 
+#action-button {
+  position: fixed;
+  top: 90%;
+  right: 3%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.fa-palette {
+  color: rgba(82, 74, 74, 0.6);
+}
+
+.theme-button-container {
+  position: fixed;
+  height: 12rem;
+  width: 5rem;
+  top: 70%;
+  right: 3.1%;
+  background-color: rgba(82, 74, 74, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000;
+  transform: translateX(500%);
+  transition: 0.5s ease-in;
+}
+
+.button-container-active {
+  transform: translateX(0%);
+}
+
+@keyframes buttonsFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.theme-button {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: blue;
+  opacity: 0;
+}
+
+.theme-button:hover {
+  border: 4px solid white;
+  transition: 0.5s ease-in;
+}
+
+#lite-blue {
+  background-color: rgba(55, 198, 245, 0.7);
+}
+
+#purple {
+  background-color: rgba(199, 98, 203, 0.7);
+}
+
+#dark-blue {
+  background-color: rgba(69, 104, 220, 0.7);
+}
+
 @media (max-width: 480px) {
   #mu-header {
     padding: 10px 0;
