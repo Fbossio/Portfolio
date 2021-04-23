@@ -42,11 +42,8 @@
     <link href="../static/css/css/magnific-popup.css" rel="stylesheet" />
 
     <!-- Theme color -->
-    <link
-      id="switcher"
-      href="../static/css/css/theme-color/lite-blue-theme.css"
-      rel="stylesheet"
-    />
+
+    <link id="switcher" rel="stylesheet" />
 
     <!-- Main Style -->
     <link href="../static/css/style.css" rel="stylesheet" />
@@ -106,10 +103,8 @@
             >
               <ul class="nav navbar-nav mu-menu navbar-right">
                 <li><a href="#">HOME</a></li>
-                <li><a href="#mu-about">ABOUT</a></li>
-                <li><a href="#mu-service">SERVICES</a></li>
-                <li><a href="#mu-portfolio">PORTFOLIO</a></li>
-                <!--<li><a href="#mu-testimonials">TESTIMONIALS</a></li>-->
+                <li><a href="#mu-about">ABOUT</a></li>                
+                <li><a href="#mu-portfolio">PORTFOLIO</a></li>                
                 <li><a href="#mu-contact">CONTACT</a></li>
               </ul>
             </div>
@@ -134,8 +129,8 @@
               <div class="mu-featured-slider-wrapper">
                 <div class="mu-featured-slider" id="typed-strings">
                   <p>I am <span>Web Developer</span></p>
-                  <p>I am <span>AI Enthusiast</span></p>
                   <p>I am <span>Pythonista</span></p>
+                  <p>I am <span>Machine Learning Enthusiast</span></p>
                 </div>
                 <span id="typed"></span>
               </div>
@@ -143,10 +138,8 @@
 
               <div class="mu-featured-content">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Facere ipsa necessitatibus voluptate. Dolores sed neque,
-                  accusantium iusto inventore harum quibusdam, aspernatur, ullam
-                  vero ea eos ipsam tenetur dolore qui voluptatibus!
+                  Python programmer with a keen interest in web development and
+                  machine learning.
                 </p>
                 <a href="#mu-portfolio" class="mu-primary-btn view-my-work-btn"
                   >VIEW MY WORK</a
@@ -165,9 +158,9 @@
       <i class="fas fa-palette fa-3x"></i>
     </div>
     <div class="theme-button-container">
-      <div id="lite-blue" class="theme-button"></div>
-      <div id="dark-blue" class="theme-button"></div>
-      <div id="purple" class="theme-button"></div>
+      <div data-mode="lite-blue" id="lite-blue" class="theme-button"></div>
+      <div data-mode="dark-blue" id="dark-blue" class="theme-button"></div>
+      <div data-mode="purple" id="purple" class="theme-button"></div>
     </div>
     <!-- End Fixed Action Button -->
 
@@ -181,58 +174,68 @@
             <div class="col-md-12">
               <div class="mu-about-area">
                 <div class="mu-about-header">
-                  <h2 class="mu-heading-title">ABOUT ME</h2>
+                  <h2 class="mu-heading-title mu-about-title">ABOUT ME</h2>
                   <span class="mu-header-dot"></span>
                   <p>
-                    My name is Kevin Pitter. I am professional
-                    <strong>Web Designer</strong> and
-                    <strong>Web Developer</strong>. Lorem Ipsum is simply dummy
-                    text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's standard dummy text ever
+                    My name is Felix Bossio. I am a
+                    <strong>Web Developer</strong>
+                    Passionate about building and deploying applications to
+                    solve real-world problems.
                   </p>
                 </div>
 
-                <!-- Start About Us Content -->
-                <div class="mu-about-content">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="mu-about-content-left">
-                        <img
-                          class="mu-profile-img"
-                          src="../static/images/profile.jpg"
-                          alt="Profile Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="mu-about-content-right">
-                        <!-- Start skills progress bar -->
+                
 
-                        <div class="mu-skill-progress-bar">
-                          <h3>Skills</h3>
-                          <span>Html5</span>
-                          <div class="mu-pro-bar mu-html5-bar"></div>
-                          <span>css</span>
-                          <div class="mu-pro-bar mu-css-bar"></div>
-                          <span>Photoshop</span>
-                          <div class="mu-pro-bar mu-photoshop-bar"></div>
-                          <span>Wordpress</span>
-                          <div class="mu-pro-bar mu-wordpress-bar"></div>
-                          <span>jQuery</span>
-                          <div class="mu-pro-bar mu-jquery-bar"></div>
-                        </div>
+                <!-- Start About Us Content -->               
 
-                        <!-- Start Social Media -->
-                        <div class="mu-social-media">
-                          <h3>Social</h3>
-                          <a href="#"><i class="fa fa-facebook"></i></a>
-                          <a href="#"><i class="fa fa-twitter"></i></a>
-                          <a href="#"><i class="fa fa-linkedin"></i></a>
-                          <a href="#"><i class="fa fa-google-plus"></i></a>
-                        </div>
+                        <section  id="skills" class="services mu-skill-progress-bar">
+                          <div class="container">
+                            <h3>Skills</h3>
+                            <div class="row">
+                              <div class="col-lg-12" data-aos="fade-up">
+                                <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
+                                  <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
+                                      <div class="icon-container">
+                                     
+                                        <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
+                                        <img src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png" alt="JavascriptLogo" height="50" width="90">                                        
+                                        <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
+                                        <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="Mongo-db-logo" height="50" width="150">                                        
+                                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190">
+                                      
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
+                                    <h4 style="text-align:left;color:#09203a">Frameworks</h4>
+                                      <div class="icon-container">
+                                     
+                                        <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="vectorlogo.zone">
+                                        <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="express.js">
+                                        <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
+                                        <img src="https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png" alt="Materialize-Logo" height="50" width="150">
+                                        <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone" height="70" width="126">                                        
+                                      
+                                      </div>
+                                </div>
+                                <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
+                                    <h4 style="text-align:left;color:#09203a">Tools</h4>
+                                      <div class="icon-container">
+                                      
+                                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">                                        
+                                        <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
+                                        <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
+                                      
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </section>
 
-                        <!-- Download Ressume Button -->
-                        <a href="#" class="mu-resume-btn">Download My Resume</a>
+                        
+                        
                       </div>
                     </div>
                   </div>
@@ -244,124 +247,6 @@
         </div>
       </section>
       <!-- End About -->
-
-      <!-- Start Service -->
-      <section id="mu-service">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="mu-service-area">
-                <div class="mu-service-header">
-                  <h2 class="mu-heading-title">MY SERVICES</h2>
-                  <span class="mu-header-dot"></span>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever
-                  </p>
-                </div>
-
-                <!-- Start Service Content -->
-                <div class="mu-service-content">
-                  <div class="row">
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-leaf"></i>
-                        </span>
-                        <h4>UI/UX Design</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-desktop"></i>
-                        </span>
-                        <h4>Web Development</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-briefcase"></i>
-                        </span>
-                        <h4>Branding</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-camera"></i>
-                        </span>
-                        <h4>Photography</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-android"></i>
-                        </span>
-                        <h4>Apps Development</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-
-                    <!-- Service Single Content -->
-                    <div class="col-md-4 col-sm-6">
-                      <div class="mu-service-content-single">
-                        <span class="mu-service-icon-box">
-                          <i class="fa fa-line-chart"></i>
-                        </span>
-                        <h4>Digital Marketing</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consect adipis elit minim
-                          veniam ettis inkeras.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / Service Single Content -->
-                  </div>
-                </div>
-                <!-- End Service Content -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Service -->
 
       <!-- Start Portfolio -->
       <section id="mu-portfolio">
@@ -706,7 +591,7 @@
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fa fa-map-marker"></i>
+                                <i class="fab fa-twitter"></i>
                               </div>
                               <p>Dooley Branch Rd Millen, GA 30442, USA</p>
                             </div>
@@ -714,7 +599,7 @@
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fa fa-phone"></i>
+                                <i class="fab fa-linkedin-in"></i>
                               </div>
                               <p>+90 987 678 9834</p>
                               <p>+90 567 098 785</p>
@@ -723,7 +608,7 @@
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fa fa-envelope"></i>
+                                <i class="fab fa-github"></i>
                               </div>
                               <p>contact@domain.com</p>
                               <p>support@domain.com</p>

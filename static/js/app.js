@@ -54,7 +54,7 @@ $(function () {
 
 const palette = document.querySelector("#action-button");
 const buttonContainer = document.querySelector(".theme-button-container");
-const themeButtons = document.querySelectorAll(".theme-button");
+let themeButtons = document.querySelectorAll(".theme-button");
 
 palette.onclick = () => {
   buttonContainer.classList.toggle("button-container-active");
@@ -71,29 +71,43 @@ palette.onclick = () => {
 };
 
 /* Switch themes */
+let theme = localStorage.getItem("theme");
 
-theme = document.querySelector("#switcher");
-liteBlue = document.querySelector("#lite-blue");
-purple = document.querySelector("#purple");
-darkBlue = document.querySelector("#dark-blue");
+if (theme) {
+  setTheme(theme);
+} else {
+  setTheme("lite-blue");
+}
 
-liteBlue.onclick = (e) => {
-  theme.setAttribute(
-    "href",
-    "../static/css/css/theme-color/lite-blue-theme.css"
-  );
-  console.log(e);
-};
+for (themeButton of themeButtons) {
+  themeButton.onclick = (e) => {
+    console.log(e.target.dataset.mode);
+    let mode = e.target.dataset.mode;
+    setTheme(mode);
+  };
+}
 
-purple.onclick = (e) => {
-  theme.setAttribute("href", "../static/css/css/theme-color/purple-theme.css");
-  console.log(e);
-};
-
-darkBlue.onclick = (e) => {
-  theme.setAttribute(
-    "href",
-    "../static/css/css/theme-color/dark-blue-theme.css"
-  );
-  console.log(e);
-};
+function setTheme(mode) {
+  if (mode == "lite-blue") {
+    document
+      .querySelector("#switcher")
+      .setAttribute(
+        "href",
+        "../static/css/css/theme-color/lite-blue-theme.css"
+      );
+  }
+  if (mode == "dark-blue") {
+    document
+      .querySelector("#switcher")
+      .setAttribute(
+        "href",
+        "../static/css/css/theme-color/dark-blue-theme.css"
+      );
+  }
+  if (mode == "purple") {
+    document
+      .querySelector("#switcher")
+      .setAttribute("href", "../static/css/css/theme-color/purple-theme.css");
+  }
+  localStorage.setItem("theme", mode);
+}
