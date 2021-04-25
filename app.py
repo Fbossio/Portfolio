@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from flask_mail import Mail, Message
-from config import config
+from config import config, Config
 from threading import Thread
 
 app = Flask(__name__)
@@ -24,13 +24,27 @@ def send_async_email(app, msg):
 def index():
     return render_template('index.html')
 
-@app.route("/send_email")
-def send_email():    
+@app.route("/send_email", methods=['POST'])
+def send_email():
+    name = request.get_json()['name']
+    email = request.get_json()['email']
+    subject = request.get_json()['subject']
+    message = request.get_json()['message']
+
+    subject_str = 'No subject'
     
-    msg = Message('Hello', sender = 'yourId@gmail.com', recipients = ['felixbossio@gmail.com'])
-    msg.body = "Hello Flask message sent from Flask-Mail"
+
+    if subject:
+        subject_str = subject 
+
+    recipient = Config.MAIL_RECIPIENT  
+    
+    msg = Message(subject_str, sender = email, recipients = [recipient])
+    msg.body = f'Sender name: {name}, Sender E-mail: {email}, Message: {message}'
     send_async_email(app, msg)
-    return '<h1>Message sent</h1>'
+
+    return jsonify({})
+    
     
     
 

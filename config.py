@@ -6,6 +6,7 @@ class Config(object):
     MAIL_PORT = 587
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_RECIPIENT = os.environ.get('MAIL_RECIPIENT')
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', 'true').lower() in \
         ['true', 'on', '1']
     

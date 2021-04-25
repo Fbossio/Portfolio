@@ -41,6 +41,9 @@
     <!-- Gallery Lightbox -->
     <link href="../static/css/css/magnific-popup.css" rel="stylesheet" />
 
+    <!-- Toastr -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
     <!-- Theme color -->
 
     <link id="switcher" rel="stylesheet" />
@@ -508,63 +511,7 @@
           </div>
         </div>
       </section>
-      <!-- End Portfolio -->
-
-      <!-- Start Testimonials -->
-      <!--
-      <section id="mu-testimonials">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="mu-testimonials-area">
-                <div class="mu-testimonial-header">
-                  <h2 class="mu-heading-title">Client Testimonials</h2>
-                  <span class="mu-header-dot"></span>
-                </div>
-
-                <div class="mu-testimonials-block">
-                  <ul class="mu-testimonial-slide">
-                    <li>
-                      <i class="fa fa-quote-right mu-quote-icon"></i>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever.
-                      </p>
-                      <h5 class="mu-ct-name">- Jhon Doe</h5>
-                      <span class="mu-ct-title">CEO, Apple Inc.</span>
-                    </li>
-
-                    <li>
-                      <i class="fa fa-quote-right mu-quote-icon"></i>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever.
-                      </p>
-                      <h5 class="mu-ct-name">- Alice Boga</h5>
-                      <span class="mu-ct-title">Director, Google Inc.</span>
-                    </li>
-
-                    <li>
-                      <i class="fa fa-quote-right mu-quote-icon"></i>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever.
-                      </p>
-                      <h5 class="mu-ct-name">- Jhon Smith</h5>
-                      <span class="mu-ct-title">Web Developer</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-	  -->
-      <!-- End Testimonials -->
+      <!-- End Portfolio -->      
 
       <!-- Start Contact -->
       <section id="mu-contact">
@@ -576,9 +523,7 @@
                   <h2 class="mu-heading-title">CONTACT ME</h2>
                   <span class="mu-header-dot"></span>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever
+                    Fill in the form below to reach me, I will get in touch with you as soon as possible.
                   </p>
                 </div>
 
@@ -591,27 +536,25 @@
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fab fa-twitter"></i>
+                                <a href="https://twitter.com/Fbossio" target="_blank" rel="noopener noreferrer" class="contact-icon"><i class="fab fa-twitter"></i></a>
                               </div>
-                              <p>Dooley Branch Rd Millen, GA 30442, USA</p>
+                              
                             </div>
                           </div>
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fab fa-linkedin-in"></i>
+                                <a href="https://www.linkedin.com/in/fbossio/?locale=en_US" target="_blank" rel="noopener noreferrer" class="contact-icon"><i class="fab fa-linkedin-in"></i></a>
                               </div>
-                              <p>+90 987 678 9834</p>
-                              <p>+90 567 098 785</p>
+                              
                             </div>
                           </div>
                           <div class="col-sm-4">
                             <div class="mu-contact-top-single">
                               <div class="mu-icon">
-                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/Fbossio" target="_blank" rel="noopener noreferrer" class="contact-icon"><i class="fab fa-github"></i></a>
                               </div>
-                              <p>contact@domain.com</p>
-                              <p>support@domain.com</p>
+                              
                             </div>
                           </div>
                         </div>
@@ -622,9 +565,7 @@
                       <div class="mu-contact-bottom">
                         <div id="form-messages"></div>
                         <form
-                          id="ajax-contact"
-                          method="post"
-                          action="mailer.php"
+                          id="ajax-contact"                                                    
                           class="mu-contact-form"
                         >
                           <div class="form-group">
@@ -645,6 +586,16 @@
                               id="email"
                               name="email"
                               required
+                            />
+                          </div>
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter Subject"
+                              id="subject"
+                              name="subject"
+                              
                             />
                           </div>
                           <div class="form-group">
@@ -724,6 +675,9 @@
       type="text/javascript"
       src="../static/js/jquery.lineProgressbar.js"
     ></script>
+
+    <!-- Toastr -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <!-- Custom js -->
     <script type="text/javascript" src="../static/js/custom.js"></script>

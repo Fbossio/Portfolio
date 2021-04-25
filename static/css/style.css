@@ -940,6 +940,11 @@ button:focus {
   color: #fff;
 }
 
+.contact-icon {
+  text-decoration: none;
+  color: #fff;
+}
+
 .mu-contact-top-single p {
   margin-bottom: 0;
 }

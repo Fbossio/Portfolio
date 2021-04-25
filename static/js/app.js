@@ -1,54 +1,56 @@
-$(function () {
-  // Get the form.
-  var form = $("#ajax-contact");
+/* Sent email */
 
-  // Get the messages div.
-  var formMessages = $("#form-messages");
+let form = document.querySelector("#ajax-contact");
 
-  // Set up an event listener for the contact form.
-  $(form).submit(function (e) {
-    // Stop the browser from submitting the form.
-    e.preventDefault();
+form.onsubmit = (e) => {
+  e.preventDefault();
 
-    // Serialize the form data.
-    var formData = $(form).serialize();
+  let user_name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let message = document.querySelector("#message").value;
+  let subject = document.querySelector("#subject").value;
 
-    // Submit the form using AJAX.
-    $.ajax({
-      type: "POST",
-      url: $(form).attr("action"),
-      data: formData,
+  fetch("/send_email", {
+    method: "POST",
+    body: JSON.stringify({
+      name: user_name,
+      email: email,
+      subject: subject,
+      message: message,
+    }),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then(() => {
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
+      document.querySelector("#message").value = "";
+      document.querySelector("#subject").value = "";
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+
+      toastr["success"]("Message sent successfully! ");
     })
-      .done(function (response) {
-        // Make sure that the formMessages div has the 'success' class.
-        $(formMessages).removeClass("error");
-        $(formMessages).addClass("success");
-
-        // Set the message text.
-        $(formMessages).text(response);
-
-        // Clear the form.
-        $("#name").val("");
-        $("#email").val("");
-        $("#subject").val("");
-        $("#message").val("");
-      })
-      .fail(function (data) {
-        // Make sure that the formMessages div has the 'error' class.
-        $(formMessages).removeClass("success");
-        $(formMessages).addClass("error");
-
-        // Set the message text.
-        if (data.responseText !== "") {
-          $(formMessages).text(data.responseText);
-        } else {
-          $(formMessages).text(
-            "Oops! An error occured and your message could not be sent."
-          );
-        }
-      });
-  });
-});
+    .catch((e) => {
+      console.log("error", e);
+      toastr["error"]("Message could not be sent. Please try again.");
+    });
+};
 
 /* Animation of color theme buttons */
 
