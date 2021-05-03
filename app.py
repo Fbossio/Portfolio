@@ -2,9 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_mail import Mail, Message
 from config import config, Config
 from threading import Thread
+import os
 
 app = Flask(__name__)
-app.config.from_object(config['development'])
+app.config.from_object(config[os.environ.get('FLASK_ENV')])
 mail = Mail(app)
 
 
