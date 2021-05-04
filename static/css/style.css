@@ -338,6 +338,7 @@ button:focus {
   display: inline;
   float: left;
   width: 100%;
+  /*min-height: 90vh;*/
 }
 
 .mu-featured-area {
