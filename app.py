@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 from flask_mail import Mail, Message
 from config import config, Config
 from threading import Thread
@@ -8,7 +8,16 @@ app = Flask(__name__)
 app.config.from_object(config[os.environ.get('FLASK_ENV')])
 mail = Mail(app)
 
+@app.before_request
+def before_request():
+    if app.env == "development":
+        return
+    if request.is_secure:
+        return
 
+    url = request.url.replace("http://", "https://", 1)
+    code = 301
+    return redirect(url, code=code)
 
 def asyncf(f):
     def wrapper(*args, **kwargs):
