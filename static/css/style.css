@@ -1370,6 +1370,11 @@ button:focus {
 @media (max-width: 644px) {
   .filtr-item:hover .mu-filter-item-content {
     padding-top: 5%;
+    font-size: 0.875rem;
+  }
+
+  .project-info {
+    display: none;
   }
 }
 
