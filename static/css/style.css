@@ -338,7 +338,7 @@ button:focus {
   display: inline;
   float: left;
   width: 100%;
-  /*min-height: 90vh;*/
+  min-height: 100vh;
 }
 
 .mu-featured-area {
@@ -1097,6 +1097,9 @@ button:focus {
 
   .mu-skill-progress-bar h3 {
     margin-top: 0;
+  }
+  .first-container {
+    padding-top: 30vh;
   }
 }
 
